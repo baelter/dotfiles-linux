@@ -1,0 +1,11 @@
+#!/bin/bash
+
+ln -is "$(realpath .gitattributes)" /home/anders/.gitattributes
+ln -is "$(realpath .gitconfig)" /home/anders/.gitconfig
+ln -is "$(realpath .gitignore_global)" /home/anders/.gitignore_global
+ln -is "$(realpath .irbrc)" /home/anders/.irbrc
+ln -is "$(realpath .profile)" /home/anders/.profile
+ln -is "$(realpath .psqlrc)" /home/anders/.psqlrc
+ln -is "$(realpath .vimrc)" /home/anders/.vimrc
+ln -is "$(realpath .bin)" /home/anders/.bin
+ln -is "$(realpath .ssh/config)" /home/anders/.ssh/config

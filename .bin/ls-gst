@@ -1,0 +1,13 @@
+#!/bin/zsh
+
+source ~/.oh-my-zsh/plugins/git-prompt/git-prompt.plugin.zsh
+esc=$(printf '\033')
+
+for d in *; do
+  if [[ -d "$d" && -e "$d/.git" ]]; then
+    echo "$d $(cd "$d" && git_super_status | sed -E 's/(%G|%\{|%\})//g' | sed -E "s/✔/${esc}[32m✔${esc}[0m/g" | sed -E "s/\|([✚…0-9]+)\)/|${esc}[31m\1${esc}[0m)/g")"
+   else
+    echo "$d"
+   fi
+done
+

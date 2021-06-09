@@ -1,0 +1,29 @@
+#!/bin/bash
+bundle
+if show=$(bundle list); then
+  l1=$(echo "$show" | awk '{print $2}')
+else
+echo "$show"
+  l1=$(echo "$show" | awk '{gsub("-","_",$18); print $18}')
+fi
+l3=$(comm -12 <(bundle config | grep 'local\.' | awk -F '.' '{print $2}' | sort -u) <(echo "$l1" | sort -u))
+
+function update() {
+  echo "Updating ${PWD##*/}"
+  stash=true
+  git stash | grep -q 'No local changes to save' && stash=false
+  git pull --rebase
+  if [ "$stash" = true ]; then
+    git stash pop || true
+  fi
+}
+
+for i in $l3; do
+  (
+    cd "../${i//_/-}" || return
+    update
+  )
+done
+git checkout -- Gemfile.lock
+update
+bundle

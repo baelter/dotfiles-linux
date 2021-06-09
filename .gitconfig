@@ -1,0 +1,34 @@
+# This is Git's per-user configuration file.
+[user]
+# Please adapt and uncomment the following lines:
+	name = Anders Bälter
+	email = anders@84codes.com
+	signingkey = FF143F4E6E352BB1
+[difftool]
+	prompt = false
+[core]
+	editor = vim
+	excludesfile = /home/anders/.gitignore_global
+	attributesfile = /home/anders/.gitattributes
+[rerere]
+	enabled = 1
+[credential]
+	helper = libsecret
+[merge]
+	tool = /usr/bin/meld
+[diff]
+  tool = /usr/bin/meld
+[mergetool]
+	prompt = false
+	keepBackup = false
+[merge "keepMine"]
+	name = always keep mine during merge
+	driver = keepMine.sh %O %A %B
+[alias]
+	prune-branches = !git remote prune origin && git branch -vv | grep ': gone]' | awk '{print $1}' | xargs git branch -d
+[pull]
+	rebase = true
+[commit]
+	verbose = true
+[rebase]
+	autostash = true

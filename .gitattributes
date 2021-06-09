@@ -1,0 +1,4 @@
+Gemfile.lock merge=keepMine
+*.rb diff=ruby
+*.rake diff=ruby
+*.cr diff=ruby

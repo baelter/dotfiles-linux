@@ -1,0 +1,11 @@
+\x auto
+\pset pager on
+\pset null '(null)'
+\set COMP_KEYWORD_CASE lower
+\pset border 2
+\pset linestyle unicode
+\pset unicode_header_linestyle double
+\pset format wrapped
+\set PROMPT1 '%M %n@%/%R%#%x '
+\set PROMPT2 ''
+\timing
