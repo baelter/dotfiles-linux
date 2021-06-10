@@ -9,3 +9,4 @@ ln -is "$(realpath .psqlrc)" /home/anders/.psqlrc
 ln -is "$(realpath .vimrc)" /home/anders/.vimrc
 ln -is "$(realpath .bin)" /home/anders/.bin
 ln -is "$(realpath .ssh/config)" /home/anders/.ssh/config
+ln -is "$(realpath .tmux.conf)" /home/anders/.tmux.conf

@@ -13,8 +13,11 @@ setopt correct
 # ulimit -n 65536
 
 # Ruby
+export PATH="$HOME/.rbenv/bin:$PATH"
+export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
 eval "$(rbenv init -)"
 export RBENV_ROOT=$HOME/.rbenv
+export PATH="/usr/local/bin/rubocop-daemon-wrapper:$PATH"
 
 # Git
 gpp() {
@@ -27,8 +30,8 @@ gppl() {
 # terminal
 export PROMPT_COMMAND='echo -ne "\033]0;${PWD##*/}\007"'
 precmd() {
-  # sets the tab title to current dir
-  echo -ne "\e]1;${PWD##*/}\a"
+ # sets the tab title to current dir
+ echo -ne "\e]1;${PWD##*/}\a"
 }
 
 # Locale
@@ -74,3 +77,6 @@ if command -v pyenv 1>/dev/null 2>&1; then
   export PATH="$PYENV_ROOT/bin:$PATH"
   eval "$(pyenv init --path)"
 fi
+
+# Node
+export PATH="$HOME/.npm-global/bin:$PATH"
