@@ -1,0 +1,39 @@
+#!/bin/bash
+
+HAML_LINE='^\s*[.%][a-zA-Z0-9.#-]+'
+SPACE_START="/${HAML_LINE}/ s/([^#]\{)(\S)/\1 \2/g"
+SPACE_END="/#\{/! s/(\S)\}/\1 \}/g"
+SPACE_END_B="/${HAML_LINE}/ s/([\}\"])\}/\1 \}/g"
+cat - |
+# Convert ":key =>" to "key:"
+sed -E "/${HAML_LINE}/ s/:['\"]?([^'\"]+[^[:space:]])[[:space:]]*=>/\1:/g" |
+# Convert ":'key-str' =>" to "'key-str':"
+sed -E "/${HAML_LINE}/ s/(['\"][^'\"]+['\"])[[:space:]]*=>/\1:/g" |
+# Add space after : and ,
+#%button.btn-close.float-end#id{data:1,data2: :b}
+sed -E "/${HAML_LINE}\{/ s/([^[:space:]:\[][:,])([^[:space:]:])/\1 \2/g" |
+# Add space inside start bracket (3 levels)
+#%button.btn-close.float-end#id{
+sed -E "${SPACE_START}" | sed -E "${SPACE_START}" | sed -E "${SPACE_START}" |
+# Add space inside end bracket
+#%button.btn-close.float-end#id{data: 1}
+sed -E "${SPACE_END}" | sed -E "${SPACE_END}" | sed -E "${SPACE_END}" |
+sed -E "${SPACE_END_B}" | sed -E "${SPACE_END_B}" | sed -E "${SPACE_END_B}" |
+# Remove extra space inside start bracket
+#%button.btn-close.float-end#id{  a
+sed -E "/${HAML_LINE}/ s/\{\s+/\{ /g" |
+# Remove extra space inside end bracket
+#%button.btn-close.float-end#id{  a
+sed -E "/${HAML_LINE}/ s/\s+\}/ \}/g" |
+# Add space after ruby chars
+#-elsif @admin
+#=data
+sed -E 's/(^\s*!?[-=])([^[:space:]#=])/\1 \2/' |
+# Add space after ruby chars 2
+#%button.btn-close.float-end#id=2
+sed -E "/${HAML_LINE}[^{]*/ s/=([^[:space:]>=]+[\"']*)$/= \1/g" |
+# Add space after ruby chars 3
+#%button.btn-close.float-end#id{ key: 1 }=2
+sed -E "/${HAML_LINE}/ s/\}=([^[:space:]])/}= \1/g" |
+# Remove redundant %div
+sed -E 's/(^\s)*%div\./\1\./'

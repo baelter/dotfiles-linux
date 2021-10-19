@@ -18,6 +18,7 @@ export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
 eval "$(rbenv init -)"
 export RBENV_ROOT=$HOME/.rbenv
 export PATH="/usr/local/bin/rubocop-daemon-wrapper:$PATH"
+alias rake='noglob rake'
 
 # Git
 gpp() {
@@ -25,6 +26,9 @@ gpp() {
 }
 gppl() {
   gpp && heroku logs -t
+}
+gho() {
+  gh repo view --web
 }
 
 # terminal
@@ -72,11 +76,8 @@ testssl6() {
 }
 
 # Python
-if command -v pyenv 1>/dev/null 2>&1; then
-  export PYENV_ROOT="$HOME/.pyenv"
-  export PATH="$PYENV_ROOT/bin:$PATH"
-  eval "$(pyenv init --path)"
-fi
+export PATH="$HOME/.pyenv/bin:$PATH"
+eval "$(pyenv virtualenv-init -)"
 
 # Node
 export PATH="$HOME/.npm-global/bin:$PATH"
