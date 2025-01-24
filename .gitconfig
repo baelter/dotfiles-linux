@@ -18,6 +18,7 @@
 	tool = meld
 [diff]
   tool = /usr/bin/meld
+	wsErrorHighlight = all
 [mergetool]
 	prompt = false
 	keepBackup = false
@@ -34,3 +35,12 @@
 	autostash = true
 [push]
 	default = current
+	followTags = true
+[init]
+	defaultBranch = main
+[credential "https://github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
