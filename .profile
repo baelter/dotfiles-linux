@@ -11,10 +11,8 @@ export PATH=$PATH:/usr/local/go/bin
 # ulimit -n 65536
 
 # Ruby
-export PATH="$PATH:$HOME/.rbenv/bin"
 export PATH="$PATH:$HOME/.rbenv/plugins/ruby-build/bin"
 eval "$(rbenv init -)"
-export RBENV_ROOT=$HOME/.rbenv
 #export PATH="/usr/local/bin/rubocop-daemon-wrapper:$PATH"
 alias rake='noglob rake'
 
@@ -24,12 +22,6 @@ export PATH=$HOME/84codes/tools/bin:$PATH
 
 
 # Git
-gpp() {
-  git push origin && git push heroku
-}
-gppl() {
-  gpp && heroku logs -t
-}
 gho() {
   gh repo view --web
 }
@@ -52,9 +44,6 @@ export LC_TIME="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
 
 # Work
-ptl() {
-  open https://papertrailapp.com/systems/$(basename $PWD)/events
-}
 hkpsql() {
   psql $(URL=$(heroku config:get ELEPHANTSQL_URL); if [ -z $URL ]; then heroku config:get DATABASE_URL; else echo $URL; fi) "$@";
 }
@@ -95,7 +84,7 @@ export PATH="$PATH:$NPM_PACKAGES/bin"
 # Otherwise, fall back to `manpath` so we can inherit from `/etc/manpath`.
 export MANPATH="${MANPATH-$(manpath)}:$NPM_PACKAGES/share/man"
 
-export SIGN_SSH_KEY_RESET_AGENT=true
+# export SIGN_SSH_KEY_RESET_AGENT=true
 
 export XDG_DATA_DIRS="$XDG_DATA_DIRS:/var/lib/flatpak/exports/share:/home/anders/.local/share/flatpak/exports/share"
 . "$HOME/.cargo/env"
@@ -111,15 +100,25 @@ function lsgit() {
   # Define colors for output
   local DIR_COLOR="\033[1;34m"      # Blue for directory names
   local BRANCH_COLOR="\033[0;31m"   # Red for branch names
-  local CLEAN_STATUS=""             # No symbol for clean repositories
-  local DIRTY_STATUS=" \033[0;33m✗" # Yellow for the dirty symbol
+  local DIRTY_COLOR=" \033[0;33m"   # Yellow for the dirty symbol
   local RESET_COLOR="\033[0m"       # Reset color
+
+  # if --no-color is passed, disable colors
+  if [[ "$1" == "--no-color" ]]; then
+    DIR_COLOR=""
+    BRANCH_COLOR=""
+    DIRTY_STATUS=""
+    RESET_COLOR=""
+  fi
+
+  local DIRTY_STATUS="$DIRTY_COLOR✗$RESET_COLOR"  # Default dirty status symbol
 
   # Iterate through each directory
   for dir in */; do
     if [ -d "$dir/.git" ]; then
       # Get the branch name and status directly using `git -C` to avoid `cd`
-      local branch=$(git -C "$dir" rev-parse --abbrev-ref HEAD 2>/dev/null)
+      local branch=""
+      branch=$(git -C "$dir" rev-parse --abbrev-ref HEAD 2>/dev/null)
       local git_status=""
 
       # Check for uncommitted or untracked changes
