@@ -1,15 +1,15 @@
 #!/bin/bash
 
+ln -is "$(realpath .local/bin)" "$HOME/.local/bin"
+ln -is "$(realpath .ssh/config)" "$HOME/.ssh/config"
 ln -is "$(realpath .gitattributes)" "$HOME/.gitattributes"
 ln -is "$(realpath .gitconfig)" "$HOME/.gitconfig"
 ln -is "$(realpath .gitignore_global)" "$HOME/.gitignore_global"
 ln -is "$(realpath .irbrc)" "$HOME/.irbrc"
 ln -is "$(realpath .profile2)" "$HOME/.profile2"
 ln -is "$(realpath .psqlrc)" "$HOME/.psqlrc"
-ln -is "$(realpath .vimrc)" "$HOME/.vimrc"
-ln -is "$(realpath .local/bin)" "$HOME/.local/bin"
-ln -is "$(realpath .ssh/config)" "$HOME/.ssh/config"
 ln -is "$(realpath .tmux.conf)" "$HOME/.tmux.conf"
+ln -is "$(realpath .vimrc)" "$HOME/.vimrc"
 
 if ! grep -qF "source .profile2" "$HOME/.profile"; then
   echo "source .profile2" >> "$HOME/.profile"
