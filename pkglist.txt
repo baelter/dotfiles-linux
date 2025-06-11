@@ -33,6 +33,7 @@ rbenv
 shellcheck
 slack-desktop
 terminator
+vim
 wget
 wireshark
 xclip
