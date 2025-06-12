@@ -12,7 +12,7 @@ ln -is "$(realpath .tmux.conf)" "$HOME/.tmux.conf"
 ln -is "$(realpath .vimrc)" "$HOME/.vimrc"
 
 if ! grep -qF "source .profile2" "$HOME/.profile"; then
-  echo "source .profile2" >> "$HOME/.profile"
+  echo "source \"$HOME/.profile2\"" >> "$HOME/.profile"
 fi
 sudo apt-get update
 sudo xargs -a pkglist.txt apt-get install -y
