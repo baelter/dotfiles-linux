@@ -29,7 +29,6 @@ meld
 nodejs
 postgresql
 rabbitmq-server
-rbenv
 shellcheck
 slack-desktop
 terminator
