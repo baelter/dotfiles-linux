@@ -4,6 +4,7 @@ ansible-lint
 aspell-sv
 bat
 build-essential
+cmake
 crystal
 curl
 dconf-editor
@@ -25,9 +26,14 @@ hunspell-sv
 hyphen-en-us
 hyphen-sv
 jq
+libgit2-dev
+libssh2-1-dev
+libzstd-dev
 meld
+myrepos
 nodejs
 postgresql
+libpq-dev
 rabbitmq-server
 shellcheck
 slack-desktop

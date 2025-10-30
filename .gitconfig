@@ -10,6 +10,7 @@
 	editor = vim
 	excludesfile = /home/anders/.gitignore_global
 	attributesfile = /home/anders/.gitattributes
+	pager = less -FRX
 [rerere]
 	enabled = 1
 [credential]
@@ -44,3 +45,7 @@
 [credential "https://gist.github.com"]
 	helper = 
 	helper = !/usr/bin/gh auth git-credential
+[url "git@github.com:"]
+	insteadOf = https://github.com/
+[advice]
+	skippedCherryPicks = false
