@@ -23,14 +23,15 @@ export PATH="$PATH:$HOME/.rbenv/plugins/ruby-build/bin"
 alias rake='noglob rake'
 
 # User bin
-export PATH=$HOME/84codes/tools/bin:$PATH
+export PATH=$HOME/84codes/tools/main/bin:$PATH
 
 # Git
 gho() {
   gh repo view --web
 }
-# vscode git extension leaks bad GIT_PAGER setting into integrated terminals
-unset GIT_PAGER
+gwtar() {
+  git fetch && git worktree add -b "$1" "$1" "origin/$1"
+}
 
 # terminal
 export PROMPT_COMMAND='echo -ne "\033]0;${PWD##*/}\007"'

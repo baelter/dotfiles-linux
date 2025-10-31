@@ -8,10 +8,17 @@ function prompt_dir() {
       # We're in a worktree
       local worktree_path=$(git rev-parse --show-toplevel 2>/dev/null)
       if [[ -n "$worktree_path" ]]; then
-        local worktree_name=$(basename "$worktree_path")
-        local repo_path=$(dirname "$worktree_path")
-        local repo_name=$(basename "$repo_path")
-        echo "%{$fg[cyan]%}${repo_name}/${worktree_name}%{$reset_color%}"
+        # Check if we're at the worktree root or in a subdirectory
+        if [[ "$PWD" == "$worktree_path" ]]; then
+          # At worktree root: show repo/worktree
+          local worktree_name=$(basename "$worktree_path")
+          local repo_path=$(dirname "$worktree_path")
+          local repo_name=$(basename "$repo_path")
+          echo "%{$fg[cyan]%}${repo_name}/${worktree_name}%{$reset_color%}"
+        else
+          # In subdirectory: show just current directory
+          echo "%{$fg[cyan]%}%c%{$reset_color%}"
+        fi
         return
       fi
     elif [[ $(git config --get core.bare 2>/dev/null) == "true" ]]; then
