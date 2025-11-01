@@ -43,6 +43,23 @@ gwtar() {
   fi
 }
 
+# Tab completion for gwtar
+if [ -n "$BASH_VERSION" ]; then
+  # Bash completion
+  _gwtar_complete() {
+    local cur="${COMP_WORDS[COMP_CWORD]}"
+    local branches=$(git branch -r 2>/dev/null | grep -v HEAD | sed 's|origin/||' | sed 's/^[[:space:]]*//')
+    COMPREPLY=( $(compgen -W "$branches" -- "$cur") )
+  }
+  complete -F _gwtar_complete gwtar
+elif [ -n "$ZSH_VERSION" ]; then
+  # Zsh completion
+  _gwtar() {
+    local branches=(${(f)"$(git branch -r 2>/dev/null | grep -v HEAD | sed 's|origin/||' | sed 's/^[[:space:]]*//')"})
+    _describe 'remote branch' branches
+  }
+  compdef _gwtar gwtar
+fi
 
 # terminal
 export PROMPT_COMMAND='echo -ne "\033]0;${PWD##*/}\007"'
