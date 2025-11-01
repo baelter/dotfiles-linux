@@ -29,7 +29,7 @@ export PATH=$HOME/84codes/tools/main/bin:$PATH
 gho() {
   gh repo view --web
 }
-gwtar() {
+gwta() {
   git fetch
   local branch_name="$1"
   local dir_name="${branch_name##*/}"  # Extract last part after last slash
@@ -46,22 +46,22 @@ gwtar() {
   fi
 }
 
-# Tab completion for gwtar
+# Tab completion for gwta
 if [ -n "$BASH_VERSION" ]; then
   # Bash completion
-  _gwtar_complete() {
+  _gwta_complete() {
     local cur="${COMP_WORDS[COMP_CWORD]}"
     local branches=$(git branch -r 2>/dev/null | grep -v HEAD | sed 's|origin/||' | sed 's/^[[:space:]]*//')
     COMPREPLY=( $(compgen -W "$branches" -- "$cur") )
   }
-  complete -F _gwtar_complete gwtar
+  complete -F _gwta_complete gwta
 elif [ -n "$ZSH_VERSION" ]; then
   # Zsh completion
-  _gwtar() {
+  _gwta() {
     local branches=(${(f)"$(git branch -r 2>/dev/null | grep -v HEAD | sed 's|origin/||' | sed 's/^[[:space:]]*//')"})
     _describe 'remote branch' branches
   }
-  compdef _gwtar gwtar
+  compdef _gwta gwta
 fi
 
 # terminal
