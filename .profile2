@@ -37,9 +37,12 @@ gwtar() {
   if git rev-parse --verify "$branch_name" >/dev/null 2>&1; then
     # Branch exists locally, just create worktree
     git worktree add "$dir_name" "$branch_name"
-  else
-    # Branch doesn't exist, create it from origin
+  elif git rev-parse --verify "origin/$branch_name" >/dev/null 2>&1; then
+    # Branch exists on remote, create from origin
     git worktree add -b "$branch_name" "$dir_name" "origin/$branch_name"
+  else
+    # Branch doesn't exist anywhere, create new branch from HEAD
+    git worktree add -b "$branch_name" "$dir_name"
   fi
 }
 
