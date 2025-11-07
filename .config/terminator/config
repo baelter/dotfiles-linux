@@ -1,0 +1,38 @@
+[global_config]
+  handle_size = 1
+  enabled_plugins = LaunchpadBugURLHandler, LaunchpadCodeURLHandler, APTURLHandler, EditorPlugin
+[keybindings]
+  switch_to_tab_1 = <Alt>1
+  switch_to_tab_2 = <Alt>2
+  switch_to_tab_3 = <Alt>3
+  switch_to_tab_4 = <Alt>4
+  switch_to_tab_5 = <Alt>5
+  switch_to_tab_10 = <Alt>0
+[profiles]
+  [[default]]
+    background_color = "#030305"
+    background_darkness = 0.96
+    background_type = transparent
+    font = Ubuntu Sans Mono 14
+    foreground_color = "#ffffff"
+    scrollback_infinite = True
+    use_system_font = False
+    use_theme_colors = True
+    title_use_system_font = False
+    title_font = Ubuntu Sans Mono 12
+[layouts]
+  [[default]]
+    [[[window0]]]
+      type = Window
+      parent = ""
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+      profile = default
+[plugins]
+  [[EditorPlugin]]
+    command = code -r --goto {filepath}:{line}:{column}
+    match = ([^ \t\n\r\f\v:[(]+?):([0-9]+):?([0-9]+)?
+    groups = file line column
+    open_in_current_term = False
+    log_level = DEBUG

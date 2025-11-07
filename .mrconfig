@@ -1,0 +1,363 @@
+[/home/anders/84codes/84bot]
+checkout = git clone --bare 'git@github.com:84codes/84bot.git' '/home/anders/84codes/84bot' && git -C '/home/anders/84codes/84bot' config remote.origin.fetch '+refs/heads/*:refs/remotes/origin/*' && git -C '/home/anders/84codes/84bot' worktree add main
+update = git fetch --all --prune && git worktree list --porcelain | grep -E '^worktree ' | cut -d' ' -f2 | while read -r wt; do git -C "$wt" pull --rebase 2>/dev/null || true; done
+
+[/home/anders/84codes/84codes-ansible]
+checkout = git clone --bare 'git@github.com:84codes/84codes-ansible.git' '/home/anders/84codes/84codes-ansible' && git -C '/home/anders/84codes/84codes-ansible' config remote.origin.fetch '+refs/heads/*:refs/remotes/origin/*' && git -C '/home/anders/84codes/84codes-ansible' worktree add main
+update = git fetch --all --prune && git worktree list --porcelain | grep -E '^worktree ' | cut -d' ' -f2 | while read -r wt; do git -C "$wt" pull --rebase 2>/dev/null || true; done
+
+[/home/anders/84codes/84codes-website]
+checkout = git clone --bare 'git@github.com:84codes/84codes-website.git' '/home/anders/84codes/84codes-website' && git -C '/home/anders/84codes/84codes-website' config remote.origin.fetch '+refs/heads/*:refs/remotes/origin/*' && git -C '/home/anders/84codes/84codes-website' worktree add main
+update = git fetch --all --prune && git worktree list --porcelain | grep -E '^worktree ' | cut -d' ' -f2 | while read -r wt; do git -C "$wt" pull --rebase 2>/dev/null || true; done
+
+[/home/anders/84codes/account-console]
+checkout = git clone --bare 'git@github.com:84codes/account-console.git' '/home/anders/84codes/account-console' && git -C '/home/anders/84codes/account-console' config remote.origin.fetch '+refs/heads/*:refs/remotes/origin/*' && git -C '/home/anders/84codes/account-console' worktree add main
+update = git fetch --all --prune && git worktree list --porcelain | grep -E '^worktree ' | cut -d' ' -f2 | while read -r wt; do git -C "$wt" pull --rebase 2>/dev/null || true; done
+
+[/home/anders/84codes/account-admin]
+checkout = git clone --bare 'git@github.com:84codes/account-admin.git' '/home/anders/84codes/account-admin' && git -C '/home/anders/84codes/account-admin' config remote.origin.fetch '+refs/heads/*:refs/remotes/origin/*' && git -C '/home/anders/84codes/account-admin' worktree add main
+update = git fetch --all --prune && git worktree list --porcelain | grep -E '^worktree ' | cut -d' ' -f2 | while read -r wt; do git -C "$wt" pull --rebase 2>/dev/null || true; done
+
+[/home/anders/84codes/actions]
+checkout = git clone --bare 'git@github.com:84codes/actions.git' '/home/anders/84codes/actions' && git -C '/home/anders/84codes/actions' config remote.origin.fetch '+refs/heads/*:refs/remotes/origin/*' && git -C '/home/anders/84codes/actions' worktree add main
+update = git fetch --all --prune && git worktree list --porcelain | grep -E '^worktree ' | cut -d' ' -f2 | while read -r wt; do git -C "$wt" pull --rebase 2>/dev/null || true; done
+
+[/home/anders/84codes/alarms]
+checkout = git clone --bare 'git@github.com:84codes/alarms.git' '/home/anders/84codes/alarms' && git -C '/home/anders/84codes/alarms' config remote.origin.fetch '+refs/heads/*:refs/remotes/origin/*' && git -C '/home/anders/84codes/alarms' worktree add main
+update = git fetch --all --prune && git worktree list --porcelain | grep -E '^worktree ' | cut -d' ' -f2 | while read -r wt; do git -C "$wt" pull --rebase 2>/dev/null || true; done
+
+[/home/anders/84codes/amqpcat]
+checkout = git clone --bare 'git@github.com:cloudamqp/amqpcat.git' '/home/anders/84codes/amqpcat' && git -C '/home/anders/84codes/amqpcat' config remote.origin.fetch '+refs/heads/*:refs/remotes/origin/*' && git -C '/home/anders/84codes/amqpcat' worktree add main
+update = git fetch --all --prune && git worktree list --porcelain | grep -E '^worktree ' | cut -d' ' -f2 | while read -r wt; do git -C "$wt" pull --rebase 2>/dev/null || true; done
+
+[/home/anders/84codes/amqp-client.cr]
+checkout = git clone --bare 'git@github.com:cloudamqp/amqp-client.cr.git' '/home/anders/84codes/amqp-client.cr' && git -C '/home/anders/84codes/amqp-client.cr' config remote.origin.fetch '+refs/heads/*:refs/remotes/origin/*' && git -C '/home/anders/84codes/amqp-client.cr' worktree add main
+update = git fetch --all --prune && git worktree list --porcelain | grep -E '^worktree ' | cut -d' ' -f2 | while read -r wt; do git -C "$wt" pull --rebase 2>/dev/null || true; done
+
+[/home/anders/84codes/amqp-client.js]
+checkout = git clone --bare 'git@github.com:cloudamqp/amqp-client.js.git' '/home/anders/84codes/amqp-client.js' && git -C '/home/anders/84codes/amqp-client.js' config remote.origin.fetch '+refs/heads/*:refs/remotes/origin/*' && git -C '/home/anders/84codes/amqp-client.js' worktree add main
+update = git fetch --all --prune && git worktree list --porcelain | grep -E '^worktree ' | cut -d' ' -f2 | while read -r wt; do git -C "$wt" pull --rebase 2>/dev/null || true; done
+
+[/home/anders/84codes/amqp-client.rb]
+checkout = git clone --bare 'git@github.com:cloudamqp/amqp-client.rb.git' '/home/anders/84codes/amqp-client.rb' && git -C '/home/anders/84codes/amqp-client.rb' config remote.origin.fetch '+refs/heads/*:refs/remotes/origin/*' && git -C '/home/anders/84codes/amqp-client.rb' worktree add main
+update = git fetch --all --prune && git worktree list --porcelain | grep -E '^worktree ' | cut -d' ' -f2 | while read -r wt; do git -C "$wt" pull --rebase 2>/dev/null || true; done
+
+[/home/anders/84codes/amq-protocol.cr]
+checkout = git clone --bare 'git@github.com:cloudamqp/amq-protocol.cr.git' '/home/anders/84codes/amq-protocol.cr' && git -C '/home/anders/84codes/amq-protocol.cr' config remote.origin.fetch '+refs/heads/*:refs/remotes/origin/*' && git -C '/home/anders/84codes/amq-protocol.cr' worktree add main
+update = git fetch --all --prune && git worktree list --porcelain | grep -E '^worktree ' | cut -d' ' -f2 | while read -r wt; do git -C "$wt" pull --rebase 2>/dev/null || true; done
+
+[/home/anders/84codes/amqproxy]
+checkout = git clone --bare 'git@github.com:cloudamqp/amqproxy.git' '/home/anders/84codes/amqproxy' && git -C '/home/anders/84codes/amqproxy' config remote.origin.fetch '+refs/heads/*:refs/remotes/origin/*' && git -C '/home/anders/84codes/amqproxy' worktree add main
+update = git fetch --all --prune && git worktree list --porcelain | grep -E '^worktree ' | cut -d' ' -f2 | while read -r wt; do git -C "$wt" pull --rebase 2>/dev/null || true; done
+
+[/home/anders/84codes/amqpshovel]
+checkout = git clone --bare 'git@github.com:cloudamqp/amqpshovel.git' '/home/anders/84codes/amqpshovel' && git -C '/home/anders/84codes/amqpshovel' config remote.origin.fetch '+refs/heads/*:refs/remotes/origin/*' && git -C '/home/anders/84codes/amqpshovel' worktree add main
+update = git fetch --all --prune && git worktree list --porcelain | grep -E '^worktree ' | cut -d' ' -f2 | while read -r wt; do git -C "$wt" pull --rebase 2>/dev/null || true; done
+
+[/home/anders/84codes/api-docs]
+checkout = git clone --bare 'git@github.com:84codes/api-docs.git' '/home/anders/84codes/api-docs' && git -C '/home/anders/84codes/api-docs' config remote.origin.fetch '+refs/heads/*:refs/remotes/origin/*' && git -C '/home/anders/84codes/api-docs' worktree add main
+update = git fetch --all --prune && git worktree list --porcelain | grep -E '^worktree ' | cut -d' ' -f2 | while read -r wt; do git -C "$wt" pull --rebase 2>/dev/null || true; done
+
+[/home/anders/84codes/awslimitchecker]
+checkout = git clone --bare 'git@github.com:84codes/awslimitchecker.git' '/home/anders/84codes/awslimitchecker' && git -C '/home/anders/84codes/awslimitchecker' config remote.origin.fetch '+refs/heads/*:refs/remotes/origin/*' && git -C '/home/anders/84codes/awslimitchecker' worktree add main
+update = git fetch --all --prune && git worktree list --porcelain | grep -E '^worktree ' | cut -d' ' -f2 | while read -r wt; do git -C "$wt" pull --rebase 2>/dev/null || true; done
+
+[/home/anders/84codes/billing-and-compliance]
+checkout = git clone --bare 'git@github.com:84codes/billing-and-compliance.git' '/home/anders/84codes/billing-and-compliance' && git -C '/home/anders/84codes/billing-and-compliance' config remote.origin.fetch '+refs/heads/*:refs/remotes/origin/*' && git -C '/home/anders/84codes/billing-and-compliance' worktree add main
+update = git fetch --all --prune && git worktree list --porcelain | grep -E '^worktree ' | cut -d' ' -f2 | while read -r wt; do git -C "$wt" pull --rebase 2>/dev/null || true; done
+
+[/home/anders/84codes/cloudamqp-azure-v3]
+checkout = git clone --bare 'git@github.com:84codes/cloudamqp-azure-v3.git' '/home/anders/84codes/cloudamqp-azure-v3' && git -C '/home/anders/84codes/cloudamqp-azure-v3' config remote.origin.fetch '+refs/heads/*:refs/remotes/origin/*' && git -C '/home/anders/84codes/cloudamqp-azure-v3' worktree add main
+update = git fetch --all --prune && git worktree list --porcelain | grep -E '^worktree ' | cut -d' ' -f2 | while read -r wt; do git -C "$wt" pull --rebase 2>/dev/null || true; done
+
+[/home/anders/84codes/cloudamqp-eventbridge]
+checkout = git clone --bare 'git@github.com:84codes/cloudamqp-eventbridge.git' '/home/anders/84codes/cloudamqp-eventbridge' && git -C '/home/anders/84codes/cloudamqp-eventbridge' config remote.origin.fetch '+refs/heads/*:refs/remotes/origin/*' && git -C '/home/anders/84codes/cloudamqp-eventbridge' worktree add main
+update = git fetch --all --prune && git worktree list --porcelain | grep -E '^worktree ' | cut -d' ' -f2 | while read -r wt; do git -C "$wt" pull --rebase 2>/dev/null || true; done
+
+[/home/anders/84codes/cloudamqp-log-shovel]
+checkout = git clone --bare 'git@github.com:84codes/cloudamqp-log-shovel.git' '/home/anders/84codes/cloudamqp-log-shovel' && git -C '/home/anders/84codes/cloudamqp-log-shovel' config remote.origin.fetch '+refs/heads/*:refs/remotes/origin/*' && git -C '/home/anders/84codes/cloudamqp-log-shovel' worktree add main
+update = git fetch --all --prune && git worktree list --porcelain | grep -E '^worktree ' | cut -d' ' -f2 | while read -r wt; do git -C "$wt" pull --rebase 2>/dev/null || true; done
+
+[/home/anders/84codes/cloudamqp-put-logs]
+checkout = git clone --bare 'git@github.com:84codes/cloudamqp-put-logs.git' '/home/anders/84codes/cloudamqp-put-logs' && git -C '/home/anders/84codes/cloudamqp-put-logs' config remote.origin.fetch '+refs/heads/*:refs/remotes/origin/*' && git -C '/home/anders/84codes/cloudamqp-put-logs' worktree add main
+update = git fetch --all --prune && git worktree list --porcelain | grep -E '^worktree ' | cut -d' ' -f2 | while read -r wt; do git -C "$wt" pull --rebase 2>/dev/null || true; done
+
+[/home/anders/84codes/cloudamqp-shared-monitor]
+checkout = git clone --bare 'git@github.com:84codes/cloudamqp-shared-monitor.git' '/home/anders/84codes/cloudamqp-shared-monitor' && git -C '/home/anders/84codes/cloudamqp-shared-monitor' config remote.origin.fetch '+refs/heads/*:refs/remotes/origin/*' && git -C '/home/anders/84codes/cloudamqp-shared-monitor' worktree add main
+update = git fetch --all --prune && git worktree list --porcelain | grep -E '^worktree ' | cut -d' ' -f2 | while read -r wt; do git -C "$wt" pull --rebase 2>/dev/null || true; done
+
+[/home/anders/84codes/cloudamqp-shovels]
+checkout = git clone --bare 'git@github.com:84codes/cloudamqp-shovels.git' '/home/anders/84codes/cloudamqp-shovels' && git -C '/home/anders/84codes/cloudamqp-shovels' config remote.origin.fetch '+refs/heads/*:refs/remotes/origin/*' && git -C '/home/anders/84codes/cloudamqp-shovels' worktree add main
+update = git fetch --all --prune && git worktree list --porcelain | grep -E '^worktree ' | cut -d' ' -f2 | while read -r wt; do git -C "$wt" pull --rebase 2>/dev/null || true; done
+
+[/home/anders/84codes/cloudamqp-webhooks]
+checkout = git clone --bare 'git@github.com:84codes/cloudamqp-webhooks.git' '/home/anders/84codes/cloudamqp-webhooks' && git -C '/home/anders/84codes/cloudamqp-webhooks' config remote.origin.fetch '+refs/heads/*:refs/remotes/origin/*' && git -C '/home/anders/84codes/cloudamqp-webhooks' worktree add main
+update = git fetch --all --prune && git worktree list --porcelain | grep -E '^worktree ' | cut -d' ' -f2 | while read -r wt; do git -C "$wt" pull --rebase 2>/dev/null || true; done
+
+[/home/anders/84codes/cloudamqp-website]
+checkout = git clone --bare 'git@github.com:84codes/cloudamqp-website.git' '/home/anders/84codes/cloudamqp-website' && git -C '/home/anders/84codes/cloudamqp-website' config remote.origin.fetch '+refs/heads/*:refs/remotes/origin/*' && git -C '/home/anders/84codes/cloudamqp-website' worktree add main
+update = git fetch --all --prune && git worktree list --porcelain | grep -E '^worktree ' | cut -d' ' -f2 | while read -r wt; do git -C "$wt" pull --rebase 2>/dev/null || true; done
+
+[/home/anders/84codes/commons]
+checkout = git clone --bare 'git@github.com:84codes/commons.git' '/home/anders/84codes/commons' && git -C '/home/anders/84codes/commons' config remote.origin.fetch '+refs/heads/*:refs/remotes/origin/*' && git -C '/home/anders/84codes/commons' worktree add main
+update = git fetch --all --prune && git worktree list --porcelain | grep -E '^worktree ' | cut -d' ' -f2 | while read -r wt; do git -C "$wt" pull --rebase 2>/dev/null || true; done
+
+[/home/anders/84codes/console-stream]
+checkout = git clone --bare 'git@github.com:84codes/console-stream.git' '/home/anders/84codes/console-stream' && git -C '/home/anders/84codes/console-stream' config remote.origin.fetch '+refs/heads/*:refs/remotes/origin/*' && git -C '/home/anders/84codes/console-stream' worktree add main
+update = git fetch --all --prune && git worktree list --porcelain | grep -E '^worktree ' | cut -d' ' -f2 | while read -r wt; do git -C "$wt" pull --rebase 2>/dev/null || true; done
+
+[/home/anders/84codes/crystal-packages]
+checkout = git clone --bare 'git@github.com:84codes/crystal-packages.git' '/home/anders/84codes/crystal-packages' && git -C '/home/anders/84codes/crystal-packages' config remote.origin.fetch '+refs/heads/*:refs/remotes/origin/*' && git -C '/home/anders/84codes/crystal-packages' worktree add main
+update = git fetch --all --prune && git worktree list --porcelain | grep -E '^worktree ' | cut -d' ' -f2 | while read -r wt; do git -C "$wt" pull --rebase 2>/dev/null || true; done
+
+[/home/anders/84codes/customer-console]
+checkout = git clone --bare 'git@github.com:84codes/customer-console.git' '/home/anders/84codes/customer-console' && git -C '/home/anders/84codes/customer-console' config remote.origin.fetch '+refs/heads/*:refs/remotes/origin/*' && git -C '/home/anders/84codes/customer-console' worktree add main
+update = git fetch --all --prune && git worktree list --porcelain | grep -E '^worktree ' | cut -d' ' -f2 | while read -r wt; do git -C "$wt" pull --rebase 2>/dev/null || true; done
+
+[/home/anders/84codes/dev-playground84]
+checkout = git clone --bare 'git@github.com:84codes/dev-playground84.git' '/home/anders/84codes/dev-playground84' && git -C '/home/anders/84codes/dev-playground84' config remote.origin.fetch '+refs/heads/*:refs/remotes/origin/*' && git -C '/home/anders/84codes/dev-playground84' worktree add main
+update = git fetch --all --prune && git worktree list --porcelain | grep -E '^worktree ' | cut -d' ' -f2 | while read -r wt; do git -C "$wt" pull --rebase 2>/dev/null || true; done
+
+[/home/anders/84codes/eightyfourcodes-herokulogs]
+checkout = git clone --bare 'git@github.com:84codes/eightyfourcodes-herokulogs.git' '/home/anders/84codes/eightyfourcodes-herokulogs' && git -C '/home/anders/84codes/eightyfourcodes-herokulogs' config remote.origin.fetch '+refs/heads/*:refs/remotes/origin/*' && git -C '/home/anders/84codes/eightyfourcodes-herokulogs' worktree add main
+update = git fetch --all --prune && git worktree list --porcelain | grep -E '^worktree ' | cut -d' ' -f2 | while read -r wt; do git -C "$wt" pull --rebase 2>/dev/null || true; done
+
+[/home/anders/84codes/eightyfourstaging-logs]
+checkout = git clone --bare 'git@github.com:84codes/eightyfourstaging-logs.git' '/home/anders/84codes/eightyfourstaging-logs' && git -C '/home/anders/84codes/eightyfourstaging-logs' config remote.origin.fetch '+refs/heads/*:refs/remotes/origin/*' && git -C '/home/anders/84codes/eightyfourstaging-logs' worktree add main
+update = git fetch --all --prune && git worktree list --porcelain | grep -E '^worktree ' | cut -d' ' -f2 | while read -r wt; do git -C "$wt" pull --rebase 2>/dev/null || true; done
+
+[/home/anders/84codes/euroku-workshop]
+checkout = git clone --bare 'git@github.com:baelter/euroku-workshop.git' '/home/anders/84codes/euroku-workshop' && git -C '/home/anders/84codes/euroku-workshop' config remote.origin.fetch '+refs/heads/*:refs/remotes/origin/*' && git -C '/home/anders/84codes/euroku-workshop' worktree add main
+update = git fetch --all --prune && git worktree list --porcelain | grep -E '^worktree ' | cut -d' ' -f2 | while read -r wt; do git -C "$wt" pull --rebase 2>/dev/null || true; done
+
+[/home/anders/84codes/examples]
+checkout = git clone --bare 'git@github.com:cloudamqp/examples.git' '/home/anders/84codes/examples' && git -C '/home/anders/84codes/examples' config remote.origin.fetch '+refs/heads/*:refs/remotes/origin/*' && git -C '/home/anders/84codes/examples' worktree add main
+update = git fetch --all --prune && git worktree list --porcelain | grep -E '^worktree ' | cut -d' ' -f2 | while read -r wt; do git -C "$wt" pull --rebase 2>/dev/null || true; done
+
+[/home/anders/84codes/handbook]
+checkout = git clone --bare 'git@github.com:84codes/handbook.git' '/home/anders/84codes/handbook' && git -C '/home/anders/84codes/handbook' config remote.origin.fetch '+refs/heads/*:refs/remotes/origin/*' && git -C '/home/anders/84codes/handbook' worktree add main
+update = git fetch --all --prune && git worktree list --porcelain | grep -E '^worktree ' | cut -d' ' -f2 | while read -r wt; do git -C "$wt" pull --rebase 2>/dev/null || true; done
+
+[/home/anders/84codes/infrastructure]
+checkout = git clone --bare 'git@github.com:84codes/infrastructure.git' '/home/anders/84codes/infrastructure' && git -C '/home/anders/84codes/infrastructure' config remote.origin.fetch '+refs/heads/*:refs/remotes/origin/*' && git -C '/home/anders/84codes/infrastructure' worktree add main
+update = git fetch --all --prune && git worktree list --porcelain | grep -E '^worktree ' | cut -d' ' -f2 | while read -r wt; do git -C "$wt" pull --rebase 2>/dev/null || true; done
+
+[/home/anders/84codes/lavinmq]
+checkout = git clone --bare 'git@github.com:cloudamqp/lavinmq.git' '/home/anders/84codes/lavinmq' && git -C '/home/anders/84codes/lavinmq' config remote.origin.fetch '+refs/heads/*:refs/remotes/origin/*' && git -C '/home/anders/84codes/lavinmq' worktree add main
+update = git fetch --all --prune && git worktree list --porcelain | grep -E '^worktree ' | cut -d' ' -f2 | while read -r wt; do git -C "$wt" pull --rebase 2>/dev/null || true; done
+
+[/home/anders/84codes/lavinmq-action]
+checkout = git clone --bare 'git@github.com:cloudamqp/lavinmq-action.git' '/home/anders/84codes/lavinmq-action' && git -C '/home/anders/84codes/lavinmq-action' config remote.origin.fetch '+refs/heads/*:refs/remotes/origin/*' && git -C '/home/anders/84codes/lavinmq-action' worktree add main
+update = git fetch --all --prune && git worktree list --porcelain | grep -E '^worktree ' | cut -d' ' -f2 | while read -r wt; do git -C "$wt" pull --rebase 2>/dev/null || true; done
+
+[/home/anders/84codes/lavinmq-benchmark]
+checkout = git clone --bare 'git@github.com:cloudamqp/lavinmq-benchmark.git' '/home/anders/84codes/lavinmq-benchmark' && git -C '/home/anders/84codes/lavinmq-benchmark' config remote.origin.fetch '+refs/heads/*:refs/remotes/origin/*' && git -C '/home/anders/84codes/lavinmq-benchmark' worktree add main
+update = git fetch --all --prune && git worktree list --porcelain | grep -E '^worktree ' | cut -d' ' -f2 | while read -r wt; do git -C "$wt" pull --rebase 2>/dev/null || true; done
+
+[/home/anders/84codes/lavinmq-docs]
+checkout = git clone --bare 'git@github.com:84codes/lavinmq-docs.git' '/home/anders/84codes/lavinmq-docs' && git -C '/home/anders/84codes/lavinmq-docs' config remote.origin.fetch '+refs/heads/*:refs/remotes/origin/*' && git -C '/home/anders/84codes/lavinmq-docs' worktree add main
+update = git fetch --all --prune && git worktree list --porcelain | grep -E '^worktree ' | cut -d' ' -f2 | while read -r wt; do git -C "$wt" pull --rebase 2>/dev/null || true; done
+
+[/home/anders/84codes/lavinmq-mgmt]
+checkout = git clone --bare 'git@github.com:84codes/lavinmq-mgmt.git' '/home/anders/84codes/lavinmq-mgmt' && git -C '/home/anders/84codes/lavinmq-mgmt' config remote.origin.fetch '+refs/heads/*:refs/remotes/origin/*' && git -C '/home/anders/84codes/lavinmq-mgmt' worktree add main
+update = git fetch --all --prune && git worktree list --porcelain | grep -E '^worktree ' | cut -d' ' -f2 | while read -r wt; do git -C "$wt" pull --rebase 2>/dev/null || true; done
+
+[/home/anders/84codes/lavinmq-operator]
+checkout = git clone --bare 'git@github.com:cloudamqp/lavinmq-operator.git' '/home/anders/84codes/lavinmq-operator' && git -C '/home/anders/84codes/lavinmq-operator' config remote.origin.fetch '+refs/heads/*:refs/remotes/origin/*' && git -C '/home/anders/84codes/lavinmq-operator' worktree add main
+update = git fetch --all --prune && git worktree list --porcelain | grep -E '^worktree ' | cut -d' ' -f2 | while read -r wt; do git -C "$wt" pull --rebase 2>/dev/null || true; done
+
+[/home/anders/84codes/lavinmq-tutorials]
+checkout = git clone --bare 'git@github.com:cloudamqp/lavinmq-tutorials.git' '/home/anders/84codes/lavinmq-tutorials' && git -C '/home/anders/84codes/lavinmq-tutorials' config remote.origin.fetch '+refs/heads/*:refs/remotes/origin/*' && git -C '/home/anders/84codes/lavinmq-tutorials' worktree add main
+update = git fetch --all --prune && git worktree list --porcelain | grep -E '^worktree ' | cut -d' ' -f2 | while read -r wt; do git -C "$wt" pull --rebase 2>/dev/null || true; done
+
+[/home/anders/84codes/lavinmq-website]
+checkout = git clone --bare 'git@github.com:84codes/lavinmq-website.git' '/home/anders/84codes/lavinmq-website' && git -C '/home/anders/84codes/lavinmq-website' config remote.origin.fetch '+refs/heads/*:refs/remotes/origin/*' && git -C '/home/anders/84codes/lavinmq-website' worktree add main
+update = git fetch --all --prune && git worktree list --porcelain | grep -E '^worktree ' | cut -d' ' -f2 | while read -r wt; do git -C "$wt" pull --rebase 2>/dev/null || true; done
+
+[/home/anders/84codes/lavinmq-workshop]
+checkout = git clone --bare 'git@github.com:84codes/lavinmq-workshop.git' '/home/anders/84codes/lavinmq-workshop' && git -C '/home/anders/84codes/lavinmq-workshop' config remote.origin.fetch '+refs/heads/*:refs/remotes/origin/*' && git -C '/home/anders/84codes/lavinmq-workshop' worktree add main
+update = git fetch --all --prune && git worktree list --porcelain | grep -E '^worktree ' | cut -d' ' -f2 | while read -r wt; do git -C "$wt" pull --rebase 2>/dev/null || true; done
+
+[/home/anders/84codes/lmqrecover]
+checkout = git clone --bare 'git@github.com:cloudamqp/lmqrecover.git' '/home/anders/84codes/lmqrecover' && git -C '/home/anders/84codes/lmqrecover' config remote.origin.fetch '+refs/heads/*:refs/remotes/origin/*' && git -C '/home/anders/84codes/lmqrecover' worktree add main
+update = git fetch --all --prune && git worktree list --porcelain | grep -E '^worktree ' | cut -d' ' -f2 | while read -r wt; do git -C "$wt" pull --rebase 2>/dev/null || true; done
+
+[/home/anders/84codes/log-forwarder.cr]
+checkout = git clone --bare 'git@github.com:84codes/log-forwarder.cr.git' '/home/anders/84codes/log-forwarder.cr' && git -C '/home/anders/84codes/log-forwarder.cr' config remote.origin.fetch '+refs/heads/*:refs/remotes/origin/*' && git -C '/home/anders/84codes/log-forwarder.cr' worktree add main
+update = git fetch --all --prune && git worktree list --porcelain | grep -E '^worktree ' | cut -d' ' -f2 | while read -r wt; do git -C "$wt" pull --rebase 2>/dev/null || true; done
+
+[/home/anders/84codes/machines]
+checkout = git clone --bare 'git@github.com:84codes/machines.git' '/home/anders/84codes/machines' && git -C '/home/anders/84codes/machines' config remote.origin.fetch '+refs/heads/*:refs/remotes/origin/*' && git -C '/home/anders/84codes/machines' worktree add main
+update = git fetch --all --prune && git worktree list --porcelain | grep -E '^worktree ' | cut -d' ' -f2 | while read -r wt; do git -C "$wt" pull --rebase 2>/dev/null || true; done
+
+[/home/anders/84codes/mailer]
+checkout = git clone --bare 'git@github.com:84codes/mailer.git' '/home/anders/84codes/mailer' && git -C '/home/anders/84codes/mailer' config remote.origin.fetch '+refs/heads/*:refs/remotes/origin/*' && git -C '/home/anders/84codes/mailer' worktree add main
+update = git fetch --all --prune && git worktree list --porcelain | grep -E '^worktree ' | cut -d' ' -f2 | while read -r wt; do git -C "$wt" pull --rebase 2>/dev/null || true; done
+
+[/home/anders/84codes/metrics-integrations]
+checkout = git clone --bare 'git@github.com:84codes/metrics-integrations.git' '/home/anders/84codes/metrics-integrations' && git -C '/home/anders/84codes/metrics-integrations' config remote.origin.fetch '+refs/heads/*:refs/remotes/origin/*' && git -C '/home/anders/84codes/metrics-integrations' worktree add main
+update = git fetch --all --prune && git worktree list --porcelain | grep -E '^worktree ' | cut -d' ' -f2 | while read -r wt; do git -C "$wt" pull --rebase 2>/dev/null || true; done
+
+[/home/anders/84codes/metrics-shovel]
+checkout = git clone --bare 'git@github.com:84codes/metrics-shovel.git' '/home/anders/84codes/metrics-shovel' && git -C '/home/anders/84codes/metrics-shovel' config remote.origin.fetch '+refs/heads/*:refs/remotes/origin/*' && git -C '/home/anders/84codes/metrics-shovel' worktree add main
+update = git fetch --all --prune && git worktree list --porcelain | grep -E '^worktree ' | cut -d' ' -f2 | while read -r wt; do git -C "$wt" pull --rebase 2>/dev/null || true; done
+
+[/home/anders/84codes/multi-ssh]
+checkout = git clone --bare 'git@github.com:84codes/multi-ssh.git' '/home/anders/84codes/multi-ssh' && git -C '/home/anders/84codes/multi-ssh' config remote.origin.fetch '+refs/heads/*:refs/remotes/origin/*' && git -C '/home/anders/84codes/multi-ssh' worktree add main
+update = git fetch --all --prune && git worktree list --porcelain | grep -E '^worktree ' | cut -d' ' -f2 | while read -r wt; do git -C "$wt" pull --rebase 2>/dev/null || true; done
+
+[/home/anders/84codes/observability-dev]
+checkout = git clone --bare 'git@github.com:84codes/observability-dev.git' '/home/anders/84codes/observability-dev' && git -C '/home/anders/84codes/observability-dev' config remote.origin.fetch '+refs/heads/*:refs/remotes/origin/*' && git -C '/home/anders/84codes/observability-dev' worktree add main
+update = git fetch --all --prune && git worktree list --porcelain | grep -E '^worktree ' | cut -d' ' -f2 | while read -r wt; do git -C "$wt" pull --rebase 2>/dev/null || true; done
+
+[/home/anders/84codes/otel-collector]
+checkout = git clone --bare 'git@github.com:84codes/otel-collector.git' '/home/anders/84codes/otel-collector' && git -C '/home/anders/84codes/otel-collector' config remote.origin.fetch '+refs/heads/*:refs/remotes/origin/*' && git -C '/home/anders/84codes/otel-collector' worktree add main
+update = git fetch --all --prune && git worktree list --porcelain | grep -E '^worktree ' | cut -d' ' -f2 | while read -r wt; do git -C "$wt" pull --rebase 2>/dev/null || true; done
+
+[/home/anders/84codes/pdf-generator]
+checkout = git clone --bare 'git@github.com:84codes/pdf-generator.git' '/home/anders/84codes/pdf-generator' && git -C '/home/anders/84codes/pdf-generator' config remote.origin.fetch '+refs/heads/*:refs/remotes/origin/*' && git -C '/home/anders/84codes/pdf-generator' worktree add main
+update = git fetch --all --prune && git worktree list --porcelain | grep -E '^worktree ' | cut -d' ' -f2 | while read -r wt; do git -C "$wt" pull --rebase 2>/dev/null || true; done
+
+[/home/anders/84codes/phoneduty-84codes]
+checkout = git clone --bare 'git@github.com:84codes/phoneduty-84codes.git' '/home/anders/84codes/phoneduty-84codes' && git -C '/home/anders/84codes/phoneduty-84codes' config remote.origin.fetch '+refs/heads/*:refs/remotes/origin/*' && git -C '/home/anders/84codes/phoneduty-84codes' worktree add main
+update = git fetch --all --prune && git worktree list --porcelain | grep -E '^worktree ' | cut -d' ' -f2 | while read -r wt; do git -C "$wt" pull --rebase 2>/dev/null || true; done
+
+[/home/anders/84codes/quorumrecover]
+checkout = git clone --bare 'git@github.com:cloudamqp/quorumrecover.git' '/home/anders/84codes/quorumrecover' && git -C '/home/anders/84codes/quorumrecover' config remote.origin.fetch '+refs/heads/*:refs/remotes/origin/*' && git -C '/home/anders/84codes/quorumrecover' worktree add main
+update = git fetch --all --prune && git worktree list --porcelain | grep -E '^worktree ' | cut -d' ' -f2 | while read -r wt; do git -C "$wt" pull --rebase 2>/dev/null || true; done
+
+[/home/anders/84codes/rabbitmq-compressed-inter-node]
+checkout = git clone --bare 'git@github.com:cloudamqp/rabbitmq-compressed-inter-node.git' '/home/anders/84codes/rabbitmq-compressed-inter-node' && git -C '/home/anders/84codes/rabbitmq-compressed-inter-node' config remote.origin.fetch '+refs/heads/*:refs/remotes/origin/*' && git -C '/home/anders/84codes/rabbitmq-compressed-inter-node' worktree add main
+update = git fetch --all --prune && git worktree list --porcelain | grep -E '^worktree ' | cut -d' ' -f2 | while read -r wt; do git -C "$wt" pull --rebase 2>/dev/null || true; done
+
+[/home/anders/84codes/rabbitmq-integration-demos]
+checkout = git clone --bare 'git@github.com:cloudamqp/rabbitmq-integration-demos.git' '/home/anders/84codes/rabbitmq-integration-demos' && git -C '/home/anders/84codes/rabbitmq-integration-demos' config remote.origin.fetch '+refs/heads/*:refs/remotes/origin/*' && git -C '/home/anders/84codes/rabbitmq-integration-demos' worktree add main
+update = git fetch --all --prune && git worktree list --porcelain | grep -E '^worktree ' | cut -d' ' -f2 | while read -r wt; do git -C "$wt" pull --rebase 2>/dev/null || true; done
+
+[/home/anders/84codes/rabbitmqreleasetesting]
+checkout = git clone --bare 'git@github.com:cloudamqp/rabbitmqreleasetesting.git' '/home/anders/84codes/rabbitmqreleasetesting' && git -C '/home/anders/84codes/rabbitmqreleasetesting' config remote.origin.fetch '+refs/heads/*:refs/remotes/origin/*' && git -C '/home/anders/84codes/rabbitmqreleasetesting' worktree add main
+update = git fetch --all --prune && git worktree list --porcelain | grep -E '^worktree ' | cut -d' ' -f2 | while read -r wt; do git -C "$wt" pull --rebase 2>/dev/null || true; done
+
+[/home/anders/84codes/rabbitmq-server-clone]
+checkout = git clone --bare 'git@github.com:cloudamqp/rabbitmq-server-clone.git' '/home/anders/84codes/rabbitmq-server-clone' && git -C '/home/anders/84codes/rabbitmq-server-clone' config remote.origin.fetch '+refs/heads/*:refs/remotes/origin/*' && git -C '/home/anders/84codes/rabbitmq-server-clone' worktree add main
+update = git fetch --all --prune && git worktree list --porcelain | grep -E '^worktree ' | cut -d' ' -f2 | while read -r wt; do git -C "$wt" pull --rebase 2>/dev/null || true; done
+
+[/home/anders/84codes/rabbitmq-server-packaging]
+checkout = git clone --bare 'git@github.com:cloudamqp/rabbitmq-server-packaging.git' '/home/anders/84codes/rabbitmq-server-packaging' && git -C '/home/anders/84codes/rabbitmq-server-packaging' config remote.origin.fetch '+refs/heads/*:refs/remotes/origin/*' && git -C '/home/anders/84codes/rabbitmq-server-packaging' worktree add main
+update = git fetch --all --prune && git worktree list --porcelain | grep -E '^worktree ' | cut -d' ' -f2 | while read -r wt; do git -C "$wt" pull --rebase 2>/dev/null || true; done
+
+[/home/anders/84codes/rabbitmq-summit]
+checkout = git clone --bare 'git@github.com:cloudamqp/rabbitmq-summit.git' '/home/anders/84codes/rabbitmq-summit' && git -C '/home/anders/84codes/rabbitmq-summit' config remote.origin.fetch '+refs/heads/*:refs/remotes/origin/*' && git -C '/home/anders/84codes/rabbitmq-summit' worktree add main
+update = git fetch --all --prune && git worktree list --porcelain | grep -E '^worktree ' | cut -d' ' -f2 | while read -r wt; do git -C "$wt" pull --rebase 2>/dev/null || true; done
+
+[/home/anders/84codes/rdqpurge]
+checkout = git clone --bare 'git@github.com:cloudamqp/rdqpurge.git' '/home/anders/84codes/rdqpurge' && git -C '/home/anders/84codes/rdqpurge' config remote.origin.fetch '+refs/heads/*:refs/remotes/origin/*' && git -C '/home/anders/84codes/rdqpurge' worktree add main
+update = git fetch --all --prune && git worktree list --porcelain | grep -E '^worktree ' | cut -d' ' -f2 | while read -r wt; do git -C "$wt" pull --rebase 2>/dev/null || true; done
+
+[/home/anders/84codes/rmq_delayed_recover]
+checkout = git clone --bare 'git@github.com:84codes/rmq_delayed_recover.git' '/home/anders/84codes/rmq_delayed_recover' && git -C '/home/anders/84codes/rmq_delayed_recover' config remote.origin.fetch '+refs/heads/*:refs/remotes/origin/*' && git -C '/home/anders/84codes/rmq_delayed_recover' worktree add main
+update = git fetch --all --prune && git worktree list --porcelain | grep -E '^worktree ' | cut -d' ' -f2 | while read -r wt; do git -C "$wt" pull --rebase 2>/dev/null || true; done
+
+[/home/anders/84codes/rmqrecover]
+checkout = git clone --bare 'git@github.com:cloudamqp/rmqrecover.git' '/home/anders/84codes/rmqrecover' && git -C '/home/anders/84codes/rmqrecover' config remote.origin.fetch '+refs/heads/*:refs/remotes/origin/*' && git -C '/home/anders/84codes/rmqrecover' worktree add main
+update = git fetch --all --prune && git worktree list --porcelain | grep -E '^worktree ' | cut -d' ' -f2 | while read -r wt; do git -C "$wt" pull --rebase 2>/dev/null || true; done
+
+[/home/anders/84codes/rmqrecover_erl]
+checkout = git clone --bare 'git@github.com:84codes/rmqrecover_erl.git' '/home/anders/84codes/rmqrecover_erl' && git -C '/home/anders/84codes/rmqrecover_erl' config remote.origin.fetch '+refs/heads/*:refs/remotes/origin/*' && git -C '/home/anders/84codes/rmqrecover_erl' worktree add main
+update = git fetch --all --prune && git worktree list --porcelain | grep -E '^worktree ' | cut -d' ' -f2 | while read -r wt; do git -C "$wt" pull --rebase 2>/dev/null || true; done
+
+[/home/anders/84codes/roadmap]
+checkout = git clone --bare 'git@github.com:84codes/roadmap.git' '/home/anders/84codes/roadmap' && git -C '/home/anders/84codes/roadmap' config remote.origin.fetch '+refs/heads/*:refs/remotes/origin/*' && git -C '/home/anders/84codes/roadmap' worktree add main
+update = git fetch --all --prune && git worktree list --porcelain | grep -E '^worktree ' | cut -d' ' -f2 | while read -r wt; do git -C "$wt" pull --rebase 2>/dev/null || true; done
+
+[/home/anders/84codes/rubocop-eighty-four-codes]
+checkout = git clone --bare 'git@github.com:84codes/rubocop-eighty-four-codes.git' '/home/anders/84codes/rubocop-eighty-four-codes' && git -C '/home/anders/84codes/rubocop-eighty-four-codes' config remote.origin.fetch '+refs/heads/*:refs/remotes/origin/*' && git -C '/home/anders/84codes/rubocop-eighty-four-codes' worktree add main
+update = git fetch --all --prune && git worktree list --porcelain | grep -E '^worktree ' | cut -d' ' -f2 | while read -r wt; do git -C "$wt" pull --rebase 2>/dev/null || true; done
+
+[/home/anders/84codes/ruby-stomp-example]
+checkout = git clone --bare 'git@github.com:cloudamqp/ruby-stomp-example.git' '/home/anders/84codes/ruby-stomp-example' && git -C '/home/anders/84codes/ruby-stomp-example' config remote.origin.fetch '+refs/heads/*:refs/remotes/origin/*' && git -C '/home/anders/84codes/ruby-stomp-example' worktree add main
+update = git fetch --all --prune && git worktree list --porcelain | grep -E '^worktree ' | cut -d' ' -f2 | while read -r wt; do git -C "$wt" pull --rebase 2>/dev/null || true; done
+
+[/home/anders/84codes/security-scanner]
+checkout = git clone --bare 'git@github.com:84codes/security-scanner.git' '/home/anders/84codes/security-scanner' && git -C '/home/anders/84codes/security-scanner' config remote.origin.fetch '+refs/heads/*:refs/remotes/origin/*' && git -C '/home/anders/84codes/security-scanner' worktree add main
+update = git fetch --all --prune && git worktree list --porcelain | grep -E '^worktree ' | cut -d' ' -f2 | while read -r wt; do git -C "$wt" pull --rebase 2>/dev/null || true; done
+
+[/home/anders/84codes/snowstorm]
+checkout = git clone --bare 'git@github.com:84codes/snowstorm.git' '/home/anders/84codes/snowstorm' && git -C '/home/anders/84codes/snowstorm' config remote.origin.fetch '+refs/heads/*:refs/remotes/origin/*' && git -C '/home/anders/84codes/snowstorm' worktree add main
+update = git fetch --all --prune && git worktree list --porcelain | grep -E '^worktree ' | cut -d' ' -f2 | while read -r wt; do git -C "$wt" pull --rebase 2>/dev/null || true; done
+
+[/home/anders/84codes/sparoid]
+checkout = git clone --bare 'git@github.com:84codes/sparoid.git' '/home/anders/84codes/sparoid' && git -C '/home/anders/84codes/sparoid' config remote.origin.fetch '+refs/heads/*:refs/remotes/origin/*' && git -C '/home/anders/84codes/sparoid' worktree add main
+update = git fetch --all --prune && git worktree list --porcelain | grep -E '^worktree ' | cut -d' ' -f2 | while read -r wt; do git -C "$wt" pull --rebase 2>/dev/null || true; done
+
+[/home/anders/84codes/sparoid.go]
+checkout = git clone --bare 'git@github.com:84codes/sparoid.go.git' '/home/anders/84codes/sparoid.go' && git -C '/home/anders/84codes/sparoid.go' config remote.origin.fetch '+refs/heads/*:refs/remotes/origin/*' && git -C '/home/anders/84codes/sparoid.go' worktree add main
+update = git fetch --all --prune && git worktree list --porcelain | grep -E '^worktree ' | cut -d' ' -f2 | while read -r wt; do git -C "$wt" pull --rebase 2>/dev/null || true; done
+
+[/home/anders/84codes/sparoid.js]
+checkout = git clone --bare 'git@github.com:84codes/sparoid.js.git' '/home/anders/84codes/sparoid.js' && git -C '/home/anders/84codes/sparoid.js' config remote.origin.fetch '+refs/heads/*:refs/remotes/origin/*' && git -C '/home/anders/84codes/sparoid.js' worktree add main
+update = git fetch --all --prune && git worktree list --porcelain | grep -E '^worktree ' | cut -d' ' -f2 | while read -r wt; do git -C "$wt" pull --rebase 2>/dev/null || true; done
+
+[/home/anders/84codes/sparoid.rb]
+checkout = git clone --bare 'git@github.com:84codes/sparoid.rb.git' '/home/anders/84codes/sparoid.rb' && git -C '/home/anders/84codes/sparoid.rb' config remote.origin.fetch '+refs/heads/*:refs/remotes/origin/*' && git -C '/home/anders/84codes/sparoid.rb' worktree add main
+update = git fetch --all --prune && git worktree list --porcelain | grep -E '^worktree ' | cut -d' ' -f2 | while read -r wt; do git -C "$wt" pull --rebase 2>/dev/null || true; done
+
+[/home/anders/84codes/sparoid-rs]
+checkout = git clone --bare 'git@github.com:84codes/sparoid-rs.git' '/home/anders/84codes/sparoid-rs' && git -C '/home/anders/84codes/sparoid-rs' config remote.origin.fetch '+refs/heads/*:refs/remotes/origin/*' && git -C '/home/anders/84codes/sparoid-rs' worktree add main
+update = git fetch --all --prune && git worktree list --porcelain | grep -E '^worktree ' | cut -d' ' -f2 | while read -r wt; do git -C "$wt" pull --rebase 2>/dev/null || true; done
+
+[/home/anders/84codes/ssh-ca-84codes]
+checkout = git clone --bare 'git@github.com:84codes/ssh-ca-84codes.git' '/home/anders/84codes/ssh-ca-84codes' && git -C '/home/anders/84codes/ssh-ca-84codes' config remote.origin.fetch '+refs/heads/*:refs/remotes/origin/*' && git -C '/home/anders/84codes/ssh-ca-84codes' worktree add main
+update = git fetch --all --prune && git worktree list --porcelain | grep -E '^worktree ' | cut -d' ' -f2 | while read -r wt; do git -C "$wt" pull --rebase 2>/dev/null || true; done
+
+[/home/anders/84codes/ssh-monitor]
+checkout = git clone --bare 'git@github.com:84codes/ssh-monitor.git' '/home/anders/84codes/ssh-monitor' && git -C '/home/anders/84codes/ssh-monitor' config remote.origin.fetch '+refs/heads/*:refs/remotes/origin/*' && git -C '/home/anders/84codes/ssh-monitor' worktree add main
+update = git fetch --all --prune && git worktree list --porcelain | grep -E '^worktree ' | cut -d' ' -f2 | while read -r wt; do git -C "$wt" pull --rebase 2>/dev/null || true; done
+
+[/home/anders/84codes/ssh-stat-collector2]
+checkout = git clone --bare 'git@github.com:84codes/ssh-stat-collector2.git' '/home/anders/84codes/ssh-stat-collector2' && git -C '/home/anders/84codes/ssh-stat-collector2' config remote.origin.fetch '+refs/heads/*:refs/remotes/origin/*' && git -C '/home/anders/84codes/ssh-stat-collector2' worktree add main
+update = git fetch --all --prune && git worktree list --porcelain | grep -E '^worktree ' | cut -d' ' -f2 | while read -r wt; do git -C "$wt" pull --rebase 2>/dev/null || true; done
+
+[/home/anders/84codes/systemd.cr]
+checkout = git clone --bare 'git@github.com:84codes/systemd.cr.git' '/home/anders/84codes/systemd.cr' && git -C '/home/anders/84codes/systemd.cr' config remote.origin.fetch '+refs/heads/*:refs/remotes/origin/*' && git -C '/home/anders/84codes/systemd.cr' worktree add main
+update = git fetch --all --prune && git worktree list --porcelain | grep -E '^worktree ' | cut -d' ' -f2 | while read -r wt; do git -C "$wt" pull --rebase 2>/dev/null || true; done
+
+[/home/anders/84codes/tcpprism]
+checkout = git clone --bare 'git@github.com:84codes/tcpprism.git' '/home/anders/84codes/tcpprism' && git -C '/home/anders/84codes/tcpprism' config remote.origin.fetch '+refs/heads/*:refs/remotes/origin/*' && git -C '/home/anders/84codes/tcpprism' worktree add main
+update = git fetch --all --prune && git worktree list --porcelain | grep -E '^worktree ' | cut -d' ' -f2 | while read -r wt; do git -C "$wt" pull --rebase 2>/dev/null || true; done
+
+[/home/anders/84codes/terraform-provider-cloudamqp]
+checkout = git clone --bare 'git@github.com:cloudamqp/terraform-provider-cloudamqp.git' '/home/anders/84codes/terraform-provider-cloudamqp' && git -C '/home/anders/84codes/terraform-provider-cloudamqp' config remote.origin.fetch '+refs/heads/*:refs/remotes/origin/*' && git -C '/home/anders/84codes/terraform-provider-cloudamqp' worktree add main
+update = git fetch --all --prune && git worktree list --porcelain | grep -E '^worktree ' | cut -d' ' -f2 | while read -r wt; do git -C "$wt" pull --rebase 2>/dev/null || true; done
+
+[/home/anders/84codes/terraform-provider-lavinmq]
+checkout = git clone --bare 'git@github.com:cloudamqp/terraform-provider-lavinmq.git' '/home/anders/84codes/terraform-provider-lavinmq' && git -C '/home/anders/84codes/terraform-provider-lavinmq' config remote.origin.fetch '+refs/heads/*:refs/remotes/origin/*' && git -C '/home/anders/84codes/terraform-provider-lavinmq' worktree add main
+update = git fetch --all --prune && git worktree list --porcelain | grep -E '^worktree ' | cut -d' ' -f2 | while read -r wt; do git -C "$wt" pull --rebase 2>/dev/null || true; done
+
+[/home/anders/84codes/terraform-terratest]
+checkout = git clone --bare 'git@github.com:84codes/terraform-terratest.git' '/home/anders/84codes/terraform-terratest' && git -C '/home/anders/84codes/terraform-terratest' config remote.origin.fetch '+refs/heads/*:refs/remotes/origin/*' && git -C '/home/anders/84codes/terraform-terratest' worktree add main
+update = git fetch --all --prune && git worktree list --porcelain | grep -E '^worktree ' | cut -d' ' -f2 | while read -r wt; do git -C "$wt" pull --rebase 2>/dev/null || true; done
+
+[/home/anders/84codes/testssl.web]
+checkout = git clone --bare 'git@github.com:84codes/testssl.web.git' '/home/anders/84codes/testssl.web' && git -C '/home/anders/84codes/testssl.web' config remote.origin.fetch '+refs/heads/*:refs/remotes/origin/*' && git -C '/home/anders/84codes/testssl.web' worktree add main
+update = git fetch --all --prune && git worktree list --porcelain | grep -E '^worktree ' | cut -d' ' -f2 | while read -r wt; do git -C "$wt" pull --rebase 2>/dev/null || true; done
+
+[/home/anders/84codes/tools]
+checkout = git clone --bare 'git@github.com:84codes/tools.git' '/home/anders/84codes/tools' && git -C '/home/anders/84codes/tools' config remote.origin.fetch '+refs/heads/*:refs/remotes/origin/*' && git -C '/home/anders/84codes/tools' worktree add main
+update = git fetch --all --prune && git worktree list --porcelain | grep -E '^worktree ' | cut -d' ' -f2 | while read -r wt; do git -C "$wt" pull --rebase 2>/dev/null || true; done
+
+[/home/anders/84codes/training-tool]
+checkout = git clone --bare 'git@github.com:84codes/training-tool.git' '/home/anders/84codes/training-tool' && git -C '/home/anders/84codes/training-tool' config remote.origin.fetch '+refs/heads/*:refs/remotes/origin/*' && git -C '/home/anders/84codes/training-tool' worktree add main
+update = git fetch --all --prune && git worktree list --porcelain | grep -E '^worktree ' | cut -d' ' -f2 | while read -r wt; do git -C "$wt" pull --rebase 2>/dev/null || true; done
+
+[/home/anders/84codes/wamschat]
+checkout = git clone --bare 'git@github.com:baelter/wasmchat.git' '/home/anders/84codes/wamschat' && git -C '/home/anders/84codes/wamschat' config remote.origin.fetch '+refs/heads/*:refs/remotes/origin/*' && git -C '/home/anders/84codes/wamschat' worktree add main
+update = git fetch --all --prune && git worktree list --porcelain | grep -E '^worktree ' | cut -d' ' -f2 | while read -r wt; do git -C "$wt" pull --rebase 2>/dev/null || true; done
+
+[/home/anders/84codes/website-deployer]
+checkout = git clone --bare 'git@github.com:84codes/website-deployer.git' '/home/anders/84codes/website-deployer' && git -C '/home/anders/84codes/website-deployer' config remote.origin.fetch '+refs/heads/*:refs/remotes/origin/*' && git -C '/home/anders/84codes/website-deployer' worktree add main
+update = git fetch --all --prune && git worktree list --porcelain | grep -E '^worktree ' | cut -d' ' -f2 | while read -r wt; do git -C "$wt" pull --rebase 2>/dev/null || true; done
+
+[/home/anders/84codes/websocket-tcp-relay]
+checkout = git clone --bare 'git@github.com:cloudamqp/websocket-tcp-relay.git' '/home/anders/84codes/websocket-tcp-relay' && git -C '/home/anders/84codes/websocket-tcp-relay' config remote.origin.fetch '+refs/heads/*:refs/remotes/origin/*' && git -C '/home/anders/84codes/websocket-tcp-relay' worktree add main
+update = git fetch --all --prune && git worktree list --porcelain | grep -E '^worktree ' | cut -d' ' -f2 | while read -r wt; do git -C "$wt" pull --rebase 2>/dev/null || true; done

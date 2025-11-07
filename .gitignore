@@ -1,1 +1,52 @@
+# Binaries
 .local/bin/*
+
+# SSH keys and sensitive data
+.ssh/id_*
+.ssh/*_rsa*
+.ssh/*.pem
+.ssh/*.key
+.ssh/known_hosts
+.ssh/authorized_keys
+
+# Cloud provider credentials
+.aws/credentials
+.aws/config
+.config/gcloud/credentials*
+.config/gcloud/access_tokens.db
+.config/gcloud/legacy_credentials/
+.boto
+
+# API tokens and secrets
+.npmrc
+.netrc
+.ansible_vault_pass
+.config/gh/config.yml
+.config/gh/hosts.yml
+.erlang.cookie
+
+# Claude sensitive data
+.claude/history.jsonl
+.claude/file-history/
+.claude/debug/
+.claude/session-env/
+.claude/todos/
+.claude/projects/
+
+# 1Password
+.config/op/
+
+# Docker credentials
+.docker/config.json
+
+# Shell history (can contain secrets)
+.bash_history
+.zsh_history
+.psql_history
+.irb_history
+
+# Temporary and cache files
+*.log
+*.swp
+*~
+.DS_Store

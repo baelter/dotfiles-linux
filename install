@@ -1,5 +1,13 @@
 #!/bin/bash
 
+# Create necessary directories
+mkdir -p "$HOME/.local"
+mkdir -p "$HOME/.ssh"
+mkdir -p "$HOME/.config/terminator"
+mkdir -p "$HOME/.config/claude-code"
+mkdir -p "$HOME/.claude"
+
+# Create symlinks for dotfiles
 ln -is "$(realpath .local/bin)" "$HOME/.local/bin"
 ln -is "$(realpath .ssh/config)" "$HOME/.ssh/config"
 ln -is "$(realpath .gitattributes)" "$HOME/.gitattributes"
@@ -10,6 +18,20 @@ ln -is "$(realpath .profile2)" "$HOME/.profile2"
 ln -is "$(realpath .psqlrc)" "$HOME/.psqlrc"
 ln -is "$(realpath .tmux.conf)" "$HOME/.tmux.conf"
 ln -is "$(realpath .vimrc)" "$HOME/.vimrc"
+
+# Shell configs
+ln -is "$(realpath .zshrc)" "$HOME/.zshrc"
+ln -is "$(realpath .zshenv)" "$HOME/.zshenv"
+
+# Application configs
+ln -is "$(realpath .mrconfig)" "$HOME/.mrconfig"
+ln -is "$(realpath .config/terminator/config)" "$HOME/.config/terminator/config"
+ln -is "$(realpath .config/claude-code/mcp_config.json)" "$HOME/.config/claude-code/mcp_config.json"
+
+# Claude CLI configs
+ln -is "$(realpath .claude/config.json)" "$HOME/.claude/config.json"
+ln -is "$(realpath .claude/settings.json)" "$HOME/.claude/settings.json"
+ln -is "$(realpath .claude/skills)" "$HOME/.claude/skills"
 
 if ! grep -qF "source .profile2" "$HOME/.profile"; then
   echo "source \"$HOME/.profile2\"" >> "$HOME/.profile"
