@@ -3,11 +3,11 @@
 # Please adapt and uncomment the following lines:
 	name = Anders Bälter
 	email = anders@84codes.com
-	signingkey = FF143F4E6E352BB1
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHbAbgtUba2QWDBcwRQtqTLxSuVFQdudeyhB7GNXWtbC
 [difftool]
 	prompt = false
 [core]
-	editor = vim
+	editor = nvim
 	excludesfile = /home/anders/.gitignore_global
 	attributesfile = /home/anders/.gitattributes
 	pager = less -FRX
@@ -47,7 +47,14 @@
 	helper = !/usr/bin/gh auth git-credential
 [url "git@github.com:"]
 	insteadOf = https://github.com/
+[wt]
+	basedir = .worktrees
+	hook = test -f ../../.env && ln -s ../../.env .env || true
 [advice]
 	skippedCherryPicks = false
 [checkout]
 	defaultRemote = origin
+[credential "https://git.heroku.com"]
+	helper = !heroku git:credentials
+[includeIf "gitdir:~/Work/branten/"]
+	path = ~/.config/git/branten

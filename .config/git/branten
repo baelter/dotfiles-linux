@@ -1,0 +1,6 @@
+# Identity for everything under ~/Work/branten (Branten AB)
+[user]
+	email = abaelter@gmail.com
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPi2Kp41x6BmcNgXMbeYUPdq6CqTI69lYUjOa4EZiW5g
+[gpg "ssh"]
+	allowedSignersFile = ~/.config/git/allowed_signers_branten

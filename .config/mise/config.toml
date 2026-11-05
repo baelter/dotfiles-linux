@@ -1,0 +1,20 @@
+[tools]
+bun = "latest"
+claude = "latest"
+codex = "latest"
+gemini = { version = "latest", allow_builds = ["@github/keytar", "node-pty"] }
+gh = "latest"
+go = "latest"
+node = "25.1.0"
+"npm:playwright" = "latest"
+python = "latest"
+ruby = "3.4.9"
+
+[settings]
+idiomatic_version_file_enable_tools = ["ruby", "node"]
+
+[settings.ruby]
+compile = false
+
+[settings.upgrade]
+auto_prune = false
